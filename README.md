@@ -6,6 +6,6 @@ TDM Studio provides access to U.S. Newsstream: a large database of digitized new
 election OR elections OR candidate OR primaries OR gubernatorial or incumbent 
 ```
 
-While this filtering process does indeed eliminate many of the non-political articles in the database, it does not perfectly guarantee that our corpus 
+While this filtering process does indeed eliminate many of the non-political articles in the database, it does not guarantee that our corpus will be free of "false positives," or articles that are incorrectly labeled as political because they contain one or more of the above keywords. For instance, any article that calls someone a good "candidate" for a COVID booster will end up in our dataset, even if it makes no mention of political elections, simply because "candidate" happens to be one of our keywords.
 
-`classifier.ipynb` contains the code that trains, hypertunes, and evaluates a classifier that can effectively distinguish between political and non-political news articles.
+To ensure that our corpus contains only documents that are relevant to study the distinctions in language used about male and female political candidates, we build a classifier that can algorithmically distinguish political articles, so that we can remove the non-political ones from the corpus entirely.
