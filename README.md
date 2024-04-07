@@ -14,3 +14,5 @@ To ensure that our corpus contains only documents that are relevant for studying
 
 ## Data Source
 
+In a classification problem such as this one, the ideal training data for a model is a large, labeled text dataset. Fortunately, a dataset of precisely this nature is available to us in the form of the [News Category Dataset](https://rishabhmisra.github.io/publications/) (hereafter NCD), created by Rishabh Misra. NCD was created by randomly sampling articles of various categories from the Huffington Post from 2012 and 2022. The data, which has been made availabla [here] (https://www.kaggle.com/datasets/rmisra/news-category-dataset/data) in JSON format, consists of `link`, `authors`, `headline`, `short_description`, `date` and `category` columns.
+
