@@ -16,7 +16,7 @@ To ensure that our corpus contains only documents that are relevant for studying
 
 In a classification problem such as this one, the ideal training data for a model is a large, labeled text dataset. Fortunately, a dataset of precisely this nature is available to us in the form of the [News Category Dataset](https://rishabhmisra.github.io/publications/) (hereafter NCD), created by Rishabh Misra. NCD was created by randomly sampling articles of various categories from the Huffington Post from 2012 and 2022. The data, which has been made availabla [here](https://www.kaggle.com/datasets/rmisra/news-category-dataset/data) in JSON format, consists of `link`, `authors`, `headline`, `short_description`, `date` and `category` columns and over 200,000 rows.
 
-## Scraping & Pre-Processing
+## Web Scraping & Pre-Processing
 
 Since NCD does not contain the actual text of the articles, the most important step is to use the `link` article to web-scrape the text of each article and store it for future analysis. Many of the links are either broken or redirect to the [huffpost.com](https://huffpost.com) homepage, but we still scraped over 11,000 articles' worth of data from the remaining valid links. The functions used to perform the web-scraping are available in `code/Scraping.ipynb`. The resulting csv, which is identical to NCD with the addition of `text` and `class` columns, is available in `data/classifierdata_raw.csv`. Note that the `text` column is the sum of the `headline`, `short_description`, and `article_text_x` columns (`article_text_x` is only the scraped text from the article's body). The `class` column simply maps NCD's original `category` column to 1 for politics and 0 otherwise.
 
