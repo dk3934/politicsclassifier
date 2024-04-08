@@ -24,4 +24,8 @@ For training the classifier itself, we keep only the `text` and `class` columns.
 
 ## Classifier
 
-After scraping and pre-processing, we end up with a dataset that has approximately 1 political article for every 2 non-political articles. We fit the data to a TF-IDF vectorizer, and then to an SVM with a linear kernel, perform a grid search to determine the optimal hyperparameters, and calculate several performance metrics that take into account our class imbalance. All of the relevant code and results are available in `code/PoliticsClassifier.ipynb`.
+After scraping and pre-processing, we end up with a dataset that has approximately 1 political article for every 2 non-political articles. We fit the data to a TF-IDF vectorizer, and then to a support vector machine with a linear kernel, perform a grid search to determine the optimal hyperparameters, and calculate several performance metrics that take into account our class imbalance. All of the relevant code and results are available in `code/PoliticsClassifier.ipynb`. We include some relevant results here:
+
+![classification report](/Users/dianakazarian/Documents/politicsclassifier/images/classreport.jpg "Classification Report")
+
+![roc-auc score](/Users/dianakazarian/Documents/politicsclassifier/images/rocplot.jpg "ROC-AUC Score")
