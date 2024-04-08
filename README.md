@@ -30,4 +30,4 @@ After scraping and pre-processing, we end up with a dataset that has approximate
 ![classification report](images/classreport.jpg)
 
 ### ROC Curve
-![auc score](images/rocplot.jpg)
+![roc curve](images/rocplot.jpg)
